@@ -2,3 +2,5 @@ User-agent: *
 Disallow: /docs/
 Disallow: /images/
 Disallow: /assets/
+
+Sitemap: https://cncstanki.com

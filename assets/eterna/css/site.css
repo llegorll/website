@@ -1,0 +1,97 @@
+/* Additions for cncstanki.com on top of the Eterna template */
+.btn-cta {
+  display: inline-block;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  font-weight: 600;
+  padding: 12px 32px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+.btn-cta:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+.btn-cta.btn-outline {
+  background: transparent;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  padding: 10px 30px;
+}
+.btn-cta.btn-outline:hover {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+.cta-section h3 { font-size: 28px; font-weight: 700; }
+.cta-section .cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
+.header .logo .logo-text { margin: 0; font-weight: 700; }
+
+/* Hero: longer Russian headline needs more room and a smaller type size */
+.hero .carousel { min-height: 600px; }
+.hero .carousel-item h1 { font-size: clamp(28px, 4vw, 44px); line-height: 1.2; }
+.hero .carousel-container { inset: 110px 64px 140px 64px; }
+@media (max-width: 768px) {
+  .hero .carousel-container { inset: 100px 24px 120px 24px; }
+}
+.hero .carousel-container,
+.hero .carousel-container p { color: #fff; }
+
+/* Footer: contact links should look like normal text, not like the footer logo link */
+.footer .footer-about .footer-contact a {
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* Inner pages */
+.page-title .subtitle { margin: 8px 0 0; font-size: 16px; }
+.cta-buttons.start { justify-content: flex-start; margin-top: 16px; }
+.main .section .content table, .main .section table { font-size: 15px; }
+.main .section img.img-fluid { width: 100%; height: auto; }
+.main .section ul { padding-left: 1.2rem; }
+.main .section .btn-cta { text-decoration: none; }
+
+/* Machine photos */
+.model-photo { display: block; width: 100%; height: auto; border-radius: .5rem; }
+.model-photo.crop { aspect-ratio: 4 / 3; object-fit: cover; object-position: center 68%; }
+figure.model { margin: 0; }
+figure.model figcaption { margin-top: 8px; font-size: 14px; color: color-mix(in srgb, var(--default-color), transparent 35%); text-align: center; }
+
+/* Blog images that are not 3:2 */
+.post-crop { width: 100%; height: auto; object-fit: cover; object-position: center 66%; aspect-ratio: 16 / 9; }
+.blog-posts .post-crop { aspect-ratio: 3 / 2; }
+
+/* Blog cards: equal height even when a card has no picture */
+.blog-posts article { height: 100%; }
+.blog-posts .row > [class*="col-"] { display: flex; }
+.blog-posts article { flex: 1; }
+
+/* Collapsible spec tables */
+details.specs { border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%); border-radius: .5rem; padding: 12px 16px; margin-bottom: 12px; background: var(--surface-color); }
+details.specs summary { cursor: pointer; font-weight: 600; font-family: var(--heading-font); }
+details.specs[open] summary { margin-bottom: 12px; }
+details.specs .table-responsive { max-height: 520px; }
+
+/* LVD series tiles and pages */
+.series-card { overflow: hidden; border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%); transition: box-shadow .3s, transform .3s; }
+.series-card:hover { box-shadow: 0 8px 24px rgba(0, 0, 0, .12); transform: translateY(-2px); }
+.series-card img { aspect-ratio: 16 / 10; object-fit: contain; background: #fff; width: 100%; }
+.series-card h3 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+.series-photo { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+
+/* Tiles with room-scene photos: fill the frame */
+.series-card img.cover { object-fit: cover; object-position: center 62%; }
+
+/* heading-level fixes (h2 instead of h3/h4, same look) */
+.hero .featured-item h2{font-weight:700;margin-bottom:15px;font-size:20px}
+.hero .featured-item h2 a{color:var(--heading-color);transition:ease-in-out .3s}
+.hero .featured-item:hover h2 a{color:var(--contrast-color)}
+.contact .info-item h2{font-size:18px;font-weight:700;margin:10px 0}
+
+:where(img[height]){height:auto}
+.related-series ul{columns:2;padding-left:1.2rem}
+@media(max-width:575px){.related-series ul{columns:1}}
+
+.service-photo{width:100%;max-height:440px;object-fit:cover;object-position:center 30%}
